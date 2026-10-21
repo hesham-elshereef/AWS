@@ -1,0 +1,8 @@
+#set($originalParam = $input.params('name'))
+#set($prefix = "@gmail.com")
+#if(!$originalParam.startsWith($prefix))
+  #set($originalParam = $originalParam + $prefix)
+#end
+{
+  "name": "$originalParam"
+}
